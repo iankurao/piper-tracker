@@ -26,7 +26,7 @@
 	    
       
           &nbsp; &nbsp; &nbsp;
-        <a href="{% url 'track-home' %}"><img src="\media\logo3.png" class="img-responsive"width="65" height="50"></a>
+        <a href="{% url 'track-home' %}"><img src="\media\piper.png" class="img-responsive"width="65" height="50"></a>
    
 
 
@@ -48,7 +48,7 @@
 	        {% if user.is_authenticated %}<!--check whether user is loged in or not-->
 
                 
-                <a  class="nav-item nav-link" href="{% url 'user-products' user.username %}">Your products</a>
+                <a  class="nav-item nav-link" href="">Your products</a>
                 
                 
 	                  <div class="d-flex justify-content-center">
@@ -100,14 +100,14 @@
         <p class='text-muted'> explore more on PIPER-TRACKER</p>
                     <ul class="list-group">
                  <div class="d-flex justify-content-center">
-                      <a href="{% url 'track-home' %}"><img src="\media\logo3.png" class="img-responsive"width="170" height="150"></a>
+                      <a href="{% url 'track-home' %}"><img src="\media\twitter_image.png" class="img-responsive"width="170" height="150"></a>
                    </div>
                    <p></p>   
 <div class="btn-group-vertical">
   <a href=""class="btn btn-outline-dark">Community Products</a>
-  <a href="" class="btn btn-outline-dark">Announcements</a>
-  <a href="" class="btn btn-outline-dark">Why Do You Need Pricetracking</a>
-  <a href="" class="btn btn-outline-dark">Benefits of Tracking</a>
+  <a href="{%url 'track-announcements'%}" class="btn btn-outline-dark">Announcements</a>
+  <a href="{%url 'track-why'%}" class="btn btn-outline-dark">Why Do You Need Pricetracking</a>
+  <a href="{%url 'track-benefits'%}" class="btn btn-outline-dark">Benefits of Tracking</a>
 </div>
                     </ul>
                   </p>

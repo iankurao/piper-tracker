@@ -29,7 +29,7 @@
 	    
       <br>
           &nbsp; &nbsp; &nbsp;
-        <a href="{% url 'track-home' %}"><img src="\media\favicon.png" class="img-responsive"width="65" height="50"></a>
+        <a href="{% url 'track-home' %}"><img src="\media\logo_transparent.png" class="img-responsive"width="65" height="50"></a>
    
 
 
@@ -51,9 +51,9 @@
 	        {% if user.is_authenticated %}<!--check whether user is loged in or not-->
 
                 
-                <a  class="nav-item nav-link" href="">Your products</a>
-                <a class="nav-item nav-link" href="">Community Products</a>
-	                  <a class="nav-item nav-link" href="">New Product</a>
+                <a  class="nav-item nav-link" href="{% url 'user-products' user.username %}">Your products</a>
+                <a class="nav-item nav-link" href="{%url 'track-">Community Products</a>
+	                  <a class="nav-item nav-link" href="{%url 'product-create'%}">New Product</a>
 	                  <a class="nav-item nav-link" href="{%url 'profile'%}">Profile</a>
                  	  <a class="btn btn-outline-danger" href="{%url 'logout'%}">Logout</a>
 	        {%else%}
@@ -76,15 +76,15 @@
   
 
 
-    	{% if messages %}
-            {% for message in messages %}
-              <div class="alert alert-{{ message.tags }}">
-                {{ message }}
-              </div>
-            {% endfor %}
-        {% endif %}
-        {% block content %}{% endblock %}<!--   only this line is different in home.html and about.html-->
-   
+  {% if messages %}
+  {% for message in messages %}
+    <div class="alert alert-{{ message.tags }}">
+      {{ message }}
+    </div>
+  {% endfor %}
+{% endif %}
+{% block content %}{% endblock %}<!--   only this line is different in home.html and about.html-->
+
 
     
 
